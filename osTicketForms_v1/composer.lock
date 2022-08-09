@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "679c69ad1a84331b2f45fad52c76929b",
+    "content-hash": "5fb84c1ddd0886a298ccb9175fb81bbe",
     "packages": [
         {
             "name": "brick/math",
@@ -890,6 +890,188 @@
             "time": "2022-06-20T21:43:11+00:00"
         },
         {
+            "name": "kris/laravel-form-builder",
+            "version": "1.51.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kristijanhusak/laravel-form-builder.git",
+                "reference": "ca25ed8c07da845b821a29eeb4133d353a28a8a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kristijanhusak/laravel-form-builder/zipball/ca25ed8c07da845b821a29eeb4133d353a28a8a2",
+                "reference": "ca25ed8c07da845b821a29eeb4133d353a28a8a2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.6@dev|^6|^7|^8|^9",
+                "illuminate/validation": "^5.6@dev|^6|^7|^8|^9",
+                "laravelcollective/html": "^5.6|^6|^7|^8|^9",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kris\\LaravelFormBuilder\\FormBuilderServiceProvider"
+                    ],
+                    "aliases": {
+                        "FormBuilder": "Kris\\LaravelFormBuilder\\Facades\\FormBuilder"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-0": {
+                    "Kris\\LaravelFormBuilder": "src/"
+                },
+                "classmap": [
+                    "tests/FormBuilderTestCase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kristijan Husak",
+                    "email": "husakkristijan@gmail.com"
+                }
+            ],
+            "description": "Laravel form builder - symfony like",
+            "keywords": [
+                "builder",
+                "form",
+                "laravel",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/kristijanhusak/laravel-form-builder/issues",
+                "source": "https://github.com/kristijanhusak/laravel-form-builder/tree/1.51.1"
+            },
+            "time": "2022-04-08T20:13:53+00:00"
+        },
+        {
+            "name": "laraeast/laravel-bootstrap-forms",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraeast/laravel-bootstrap-forms.git",
+                "reference": "b2a1e949249b4a1a68df0524a21b842542f7d4e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraeast/laravel-bootstrap-forms/zipball/b2a1e949249b4a1a68df0524a21b842542f7d4e7",
+                "reference": "b2a1e949249b4a1a68df0524a21b842542f7d4e7",
+                "shasum": ""
+            },
+            "require": {
+                "laraeast/laravel-locales": "^3.0",
+                "laravelcollective/html": "^5.6|^6.0|^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.3|^6.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laraeast\\LaravelBootstrapForms\\Providers\\BootstrapFormsServiceProvider"
+                    ],
+                    "aliases": {
+                        "BsForm": "Laraeast\\LaravelBootstrapForms\\Facades\\BsForm"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laraeast\\LaravelBootstrapForms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Al-Shahawi",
+                    "email": "alshahawi@outlook.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ahmed Fathy",
+                    "email": "aliraqi.dev@gmail.com"
+                }
+            ],
+            "description": "Provides an easy way to use bootstrap components within your Laravel projects.",
+            "support": {
+                "issues": "https://github.com/laraeast/laravel-bootstrap-forms/issues",
+                "source": "https://github.com/laraeast/laravel-bootstrap-forms/tree/v5.2.1"
+            },
+            "time": "2020-09-15T08:49:42+00:00"
+        },
+        {
+            "name": "laraeast/laravel-locales",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraeast/laravel-locales.git",
+                "reference": "03b6a26858fa0b70d638ffa2a12f2ed104fa9a88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraeast/laravel-locales/zipball/03b6a26858fa0b70d638ffa2a12f2ed104fa9a88",
+                "reference": "03b6a26858fa0b70d638ffa2a12f2ed104fa9a88",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.5|^6.0|^7.0|^8.0|^9.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "~3.0|~4.0|~5.0|~6.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laraeast\\LaravelLocales\\Providers\\LocalesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Locales": "Laraeast\\LaravelLocales\\Facades\\Locales"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laraeast\\LaravelLocales\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Aliraqi",
+                    "email": "aliraqi.dev@gmail.com"
+                }
+            ],
+            "description": "The package used to support multi locales in your application.",
+            "support": {
+                "issues": "https://github.com/laraeast/laravel-locales/issues",
+                "source": "https://github.com/laraeast/laravel-locales/tree/v3.2.1"
+            },
+            "time": "2022-02-12T17:18:33+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v9.24.0",
             "source": {
@@ -1321,6 +1503,78 @@
                 "source": "https://github.com/laravel/ui/tree/v4.0.0"
             },
             "time": "2022-07-25T10:21:27+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/session": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "time": "2022-02-08T21:02:54+00:00"
         },
         {
             "name": "league/commonmark",
@@ -1859,62 +2113,6 @@
                 }
             ],
             "time": "2022-08-06T12:41:24+00:00"
-        },
-        {
-            "name": "netojose/laravel-bootstrap-4-forms",
-            "version": "3.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/netojose/laravel-bootstrap-4-forms.git",
-                "reference": "8800ce0ef53d73ae16b6c6600a8e90589c75d1c6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/netojose/laravel-bootstrap-4-forms/zipball/8800ce0ef53d73ae16b6c6600a8e90589c75d1c6",
-                "reference": "8800ce0ef53d73ae16b6c6600a8e90589c75d1c6",
-                "shasum": ""
-            },
-            "type": "package",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
-                    ],
-                    "aliases": {
-                        "Form": "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "NetoJose\\Bootstrap4Forms\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "José Sousa",
-                    "email": "sputinykster@gmail.com"
-                }
-            ],
-            "description": "Bootstrap 4 form builder for Laravel 5",
-            "keywords": [
-                "Forms",
-                "bootstrap",
-                "composer",
-                "form-builder",
-                "laravel",
-                "package",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/netojose/laravel-bootstrap-4-forms/issues",
-                "source": "https://github.com/netojose/laravel-bootstrap-4-forms/tree/3.0.5"
-            },
-            "time": "2021-01-06T13:48:35+00:00"
         },
         {
             "name": "nette/schema",
@@ -2935,6 +3133,56 @@
                 }
             ],
             "time": "2022-08-05T17:58:37+00:00"
+        },
+        {
+            "name": "serwer/sms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SerwerSMSpl/serwersms-laravel5.git",
+                "reference": "9bc8e0f91f936a90f4b18ad95a8bd136fb13989c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SerwerSMSpl/serwersms-laravel5/zipball/9bc8e0f91f936a90f4b18ad95a8bd136fb13989c",
+                "reference": "9bc8e0f91f936a90f4b18ad95a8bd136fb13989c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Serwer\\Sms\\": "src/"
+                },
+                "classmap": [
+                    "src/migrations"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SerwerSMS.pl",
+                    "email": "biuro@serwersms.pl"
+                }
+            ],
+            "description": "This is a Laravel package for communication with the API v2 SerwerSMS.pl",
+            "homepage": "https://serwersms.pl/",
+            "keywords": [
+                "api sms",
+                "serwersms",
+                "sms"
+            ],
+            "support": {
+                "issues": "https://github.com/SerwerSMSpl/serwersms-laravel5/issues",
+                "source": "https://github.com/SerwerSMSpl/serwersms-laravel5/tree/master"
+            },
+            "time": "2018-05-28T08:31:30+00:00"
         },
         {
             "name": "symfony/console",
@@ -8082,7 +8330,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "serwer/sms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

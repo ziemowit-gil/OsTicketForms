@@ -18,7 +18,7 @@ Route::get('/forms/MS365PassReset/view',
     [App\Http\Controllers\MS365PassResetController::class, 'FormView'])
     ->name('MS365PassResetForm');
 
-Route::get('/forms/MS365PassReset/store',
+Route::post('/forms/MS365PassReset/store',
     [App\Http\Controllers\MS365PassResetController::class, 'store'])
     ->name('MS365PassResetFormStore');
 

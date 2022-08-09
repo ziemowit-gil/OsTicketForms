@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\MS365PassReset;
+use http\Client;
 use Illuminate\Http\Request;
 use it\thecsea\osticket_php_client\OsticketPhpClient;
 use it\thecsea\osticket_php_client\OsticketPhpClientException;
+use Kris\LaravelFormBuilder\FormBuilder;
+
 
 
 class MS365PassResetController extends Controller
@@ -17,49 +19,33 @@ class MS365PassResetController extends Controller
      */
 
 
- public function FormView() {
+ public function FormView( FormBuilder $formBuilder) {
 
-     return view('MS365PasswordReset.showform');
+     $form = $formBuilder->create('App\Forms\Microsoft365AccessRequest', [
+         'method' => 'POST',
+         'url' => route('MS365PassResetFormStore')
+     ]);
+
+     return view('MS365PasswordReset.showform',compact('form'));
 
  }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
 
-        $url = 'https://www.srv45346.seohost.com.pl/feer/helpdesk';
-        $apiKey = '';
 
 
-        $support = new OsticketPhpClient($url, $apiKey);
-        try{
-            $response = $client->newTicket()
-                ->withName('test')
-                ->withEmail('test@test.com')
-                ->withPhone('+48535231923')
-                ->withSubject('subject')
-                ->withMessage('message')
-                ->withTopicId('1')
-                ->getData();
-            print $response;
-        }catch(OsticketPhpClientException $e){
-            print $client->getMessage();
-        }
+      $pesel = $request->pesel;
+      $phoneNumber = $request->phoneNumber;
+      $m365login = $request->m365login;
+
+
+
+
+        return  view('MS365PasswordReset.success');
+
+
 
 
     }
