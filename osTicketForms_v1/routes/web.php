@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+Route::get('/forms/MS365PassReset/view',
+    [App\Http\Controllers\MS365PassResetController::class, 'FormView'])
+    ->name('MS365PassResetForm');
+
+Route::get('/forms/MS365PassReset/store',
+    [App\Http\Controllers\MS365PassResetController::class, 'store'])
+    ->name('MS365PassResetFormStore');
+
+
 
 Auth::routes();
 

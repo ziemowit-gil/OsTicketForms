@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\MS365PassReset;
 use Illuminate\Http\Request;
+use it\thecsea\osticket_php_client\OsticketPhpClient;
+use it\thecsea\osticket_php_client\OsticketPhpClientException;
+
 
 class MS365PassResetController extends Controller
 {
@@ -12,12 +15,11 @@ class MS365PassResetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
 
- public function MS365PasswordResetFormView() {
+
+ public function FormView() {
+
+     return view('MS365PasswordReset.showform');
 
  }
 
@@ -39,7 +41,27 @@ class MS365PassResetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $url = 'https://www.srv45346.seohost.com.pl/feer/helpdesk';
+        $apiKey = '';
+
+
+        $support = new OsticketPhpClient($url, $apiKey);
+        try{
+            $response = $client->newTicket()
+                ->withName('test')
+                ->withEmail('test@test.com')
+                ->withPhone('+48535231923')
+                ->withSubject('subject')
+                ->withMessage('message')
+                ->withTopicId('1')
+                ->getData();
+            print $response;
+        }catch(OsticketPhpClientException $e){
+            print $client->getMessage();
+        }
+
+
     }
 
     /**
