@@ -27,6 +27,7 @@ class Microsoft365AccessRequestSucess extends Mailable
      * @return $this
      */
     public function build()
+
     {
         return $this->view('MS365PasswordReset.emails.osTicketRequestTemplate');
     }

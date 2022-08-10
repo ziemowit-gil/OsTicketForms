@@ -13,6 +13,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
+        "orchid/platform": "^13.1",
         "serwer/sms": "dev-master",
         "thecsea/osticket-php-client": "^0.1.7"
     },
