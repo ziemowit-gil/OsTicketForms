@@ -46,10 +46,12 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Zapamiętaj mnies') }}
+                                        {{ __('Zapamiętaj mnie') }}
                                     </label>
                                 </div>
-                            </div>
+                           <a href="/rodo">Informacja o przetwarzaniu danych osobowych </a> </div>
+
+                        </div>
                         </div>
 
                         <div class="row mb-0">
@@ -62,6 +64,7 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

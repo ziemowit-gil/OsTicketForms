@@ -22,6 +22,8 @@ Route::post('/forms/MS365PassReset/store',
     [App\Http\Controllers\MS365PassResetController::class, 'store'])
     ->name('MS365PassResetFormStore');
 
+Route::get('/rodo',
+    [App\Http\Controllers\StaticPageController::class, 'GDPRStaticPage']);
 
 
 Auth::routes();
